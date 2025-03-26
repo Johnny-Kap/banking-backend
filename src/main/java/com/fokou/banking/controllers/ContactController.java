@@ -4,6 +4,7 @@ package com.fokou.banking.controllers;
 import com.fokou.banking.dto.AddressDto;
 import com.fokou.banking.dto.ContactDto;
 import com.fokou.banking.services.ContactService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/contact")
 @RequiredArgsConstructor
+@Tag(name = "contact")
 public class ContactController {
 
     private final ContactService service;

@@ -4,6 +4,7 @@ package com.fokou.banking.controllers;
 import com.fokou.banking.repositories.TransactionSumDetails;
 import com.fokou.banking.services.StatisticsService;
 import com.fokou.banking.services.TransactionService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/statistics")
 @RequiredArgsConstructor
+@Tag(name = "statistics")
 public class StatisticsController {
 
     private final StatisticsService service;

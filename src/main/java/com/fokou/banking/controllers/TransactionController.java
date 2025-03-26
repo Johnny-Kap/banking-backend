@@ -4,6 +4,7 @@ package com.fokou.banking.controllers;
 import com.fokou.banking.dto.AddressDto;
 import com.fokou.banking.dto.TransactionDto;
 import com.fokou.banking.services.TransactionService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/transactions")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
+@Tag(name = "transaction")
 public class TransactionController {
 
     private final TransactionService service;

@@ -7,6 +7,7 @@ import com.fokou.banking.dto.AuthenticationResponse;
 import com.fokou.banking.dto.UserDto;
 import com.fokou.banking.repositories.UserRepository;
 import com.fokou.banking.services.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@Tag(name = "authentication")
 public class AuthenticationController {
 
     private final UserService userService;
